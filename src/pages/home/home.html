@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>หน้าหลัก</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="home">  
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <ion-slides  pager> 
+          <ion-slides style="background-color:white;">
+            <ion-slide >
+              <img src="https://promotions.co.th/wp-content/uploads/KFC-%E0%B8%88%E0%B8%B8%E0%B9%83%E0%B8%88-%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B9%83%E0%B8%88.png"/>
+              ลาบอร่อย
+            </ion-slide>
+            <ion-slide >
+              <img src="https://images.theconversation.com/files/180401/original/file-20170731-22175-67v3q2.jpg?ixlib=rb-1.1.0&rect=0%2C589%2C5472%2C2654&q=45&auto=format&w=1356&h=668&fit=crop"/>
+            </ion-slide>
+            <ion-slide>
+              <img src="https://images.theconversation.com/files/180401/original/file-20170731-22175-67v3q2.jpg?ixlib=rb-1.1.0&rect=0%2C589%2C5472%2C2654&q=45&auto=format&w=1356&h=668&fit=crop"/>
+            </ion-slide>
+          </ion-slides>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div cards padding>
+
+    <div class="grid-full">
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="gotodetil()">
+            <img src="https://www.punpromotion.com/wp-content/uploads/2018/02/1-2.jpg"/>
+              <ion-card-title>
+                <div class="card-title">São Paulo</div>
+                <div class="card-subtitle">41 Listings</div>
+              </ion-card-title>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card>
+              <img src="http://www.salehere.co.th/wp-content/uploads/2018/02/1-71.jpg"/>
+                <ion-card-title>
+                  <div class="card-title">São Paulo</div>
+                  <div class="card-subtitle">41 Listings</div>
+                </ion-card-title>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvTENoT13KDVmFQZDc0G2LSyzdI5EO8sRPK6i4v9ho_aQQO1rj"/>
+                <ion-card-title>
+                  <div class="card-title">São Paulo</div>
+                  <div class="card-subtitle">41 Listings</div>
+                </ion-card-title>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card>
+              <img src="https://www.punpromotion.com/wp-content/uploads/2017/11/23722331_1542317835804564_8256873554372335989_n.jpg"/>
+                <ion-card-title>
+                  <div class="card-title">São Paulo</div>
+                  <div class="card-subtitle">41 Listings</div>
+                </ion-card-title>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </div>
+  
+</ion-content>
