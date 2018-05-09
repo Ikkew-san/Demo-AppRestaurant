@@ -7,61 +7,13 @@
     </ion-navbar>
   </ion-header>
 
-
-<<ion-content class="card-background-page">
+<ion-content class="card-background-page">
          
-         
-    <ion-card  (click)="gototoprated()">
-        <img src="../assets/imgs/fried4.jpg" >
-        <div class="card-title">อาหารยอดฮิต</div>
-      
-     
+    <ion-card  *ngFor="let item of fullitem">
+       <img src="../assets/imgs/{{item.img}}" width="100%" height="250">     
+    
+        <div class="card-title"> {{item.namefood}}</div>
     </ion-card>
   
-    <ion-card  (click)="gototoboilc()">
-        <img src="../assets/imgs/toboilc5.jpg">
-        <div class="card-title">ต้ม-แกง</div>
-      
-    </ion-card>
-  
-    <ion-card (click)="gotofried()">
-        <img src="../assets/imgs/fried2.jpg">
-        <div class="card-title">ทอด</div>
-     
-    </ion-card>
-  
-    <ion-card (click)="gotoseafood()">
-        <img src="../assets/imgs/seafood1.jpg">
-        <div class="card-title">ซีฟู้ด</div>
-    
-    </ion-card>
-
-    <ion-card (click)="gotoyam()">
-        <img src="../assets/imgs/yam1.jpg">
-        <div class="card-title">ยำ</div>
-    
-    </ion-card>
-
-    <ion-card (click)="gotoonedish()">
-        <img src="../assets/imgs/onedish4.jpg">
-        <div class="card-title">อาหารจานเดียว</div>
-    
-    </ion-card>
-
-    <ion-card (click)="gotogrill()">
-        <img src="../assets/imgs/grill1.jpg">
-        <div class="card-title">ปิ้ง-ย่าง</div>
-   
-    </ion-card>
-    <ion-card (click)="gotosteam()">
-        <img src="../assets/imgs/steam1.jpg">
-        <div class="card-title">นึ่ง</div>
-    
-    </ion-card>
-    <ion-card  (click)="gotowaterchilli()">
-        <img src="../assets/imgs/waterchilli2.jpg">
-        <div class="card-title">น้ำพริก</div>
-    
-    </ion-card>
     
 </ion-content>

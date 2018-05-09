@@ -5,15 +5,18 @@ page-typeoffood {
         ion-card {
             position: relative;
             text-align: center;
+            height: 75;
+
         }
-        
+      
         .card-title {
             position: absolute;
             top: 36%;
             font-size: 2.0em;
             width: 100%;
             font-weight: bold;
-            color: #fff;
+            color: rgb(0, 0, 0);
+            
         }
         .bg1 {
             background-color: rgb(0, 0, 0);
