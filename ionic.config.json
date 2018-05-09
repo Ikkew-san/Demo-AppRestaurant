@@ -1,6 +1,6 @@
 {
   "name": "Demo-AppRestaurant",
-  "app_id": "",
+  "app_id": "50f32bfb",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
