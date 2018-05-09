@@ -4,6 +4,8 @@ import { HomePage } from '../home/home';
 import { PromotionPage } from '../promotion/promotion';
 import { FavoritesPage } from '../favorites/favorites';
 import { TypeoffoodPage } from '../typeoffood/typeoffood';
+import { BasketPage } from '../basket/basket';
+
 
 
 @Component({

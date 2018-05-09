@@ -14,6 +14,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'basket.html',
 })
 export class BasketPage {
+  btnEdit = false;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

@@ -12,6 +12,7 @@ import { TypeoffoodPage } from '../pages/typeoffood/typeoffood';
 import { PromotionPage } from '../pages/promotion/promotion';
 import { FavoritesPage } from '../pages/favorites/favorites';
 import { DetailPromotionPage } from '../pages/detail-promotion/detail-promotion';
+import { BasketPage } from '../pages/basket/basket';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DetailPromotionPage } from '../pages/detail-promotion/detail-promotion'
     TypeoffoodPage,
     PromotionPage,
     FavoritesPage,
-    DetailPromotionPage
+    DetailPromotionPage,
+    BasketPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { DetailPromotionPage } from '../pages/detail-promotion/detail-promotion'
     TypeoffoodPage,
     PromotionPage,
     FavoritesPage,
-    DetailPromotionPage
+    DetailPromotionPage,
+    BasketPage
   ],
   providers: [
     StatusBar,
