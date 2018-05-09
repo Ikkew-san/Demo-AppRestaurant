@@ -5,48 +5,28 @@
     </button>
     <ion-title>ตะกร้าสินค้า</ion-title>
     <ion-buttons end>
-        <button ion-button icon-only (click)="btnActivate(first)">
-          แก้ไข
-        </button>
+      <button ion-button icon-only (click)="btnActivate()" [hidden]="btnEdit">
+        แก้ไข
+      </button>
+      <button ion-button icon-only (click)="btnActivate()" [hidden]="btnHide">
+        ยกเลิก
+      </button>
+      <button ion-button icon-only (click)="btnActivate()" [hidden]="btnHide">
+        ลบ
+      </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content>
-  <ion-card>
+  <ion-card *ngFor="let item of t">
     <ion-row style="height: 15vh;">
-      <ion-img col-5 width="100%"></ion-img>
-    </ion-row>
-  </ion-card>
-  <ion-card>
-    <ion-row style="height: 15vh;">
-      <ion-img col-5 width="100%"></ion-img>
-    </ion-row>
-  </ion-card>
-  <ion-card>
-    <ion-row style="height: 15vh;">
-      <ion-img col-5 width="100%"></ion-img>
-    </ion-row>
-  </ion-card>
-  <ion-card>
-    <ion-row style="height: 15vh;">
-      <ion-img col-5 width="100%"></ion-img>
-    </ion-row>
-  </ion-card>
-  <ion-card>
-    <ion-row style="height: 15vh;">
-      <ion-img col-5 width="100%"></ion-img>
-    </ion-row>
-  </ion-card>
-  <ion-card>
-    <ion-row style="height: 15vh;">
-      <ion-img col-5 width="100%"></ion-img>
-    </ion-row>
-  </ion-card>
-  <ion-card>
-    <ion-row style="height: 15vh;">
-      <ion-img col-5 width="100%"></ion-img>
+      <img col-5 src="../assets/imgs/{{item.img}}">
+      <div col-7>
+        <strong>{{item.listfood}}</strong>
+        <p>ราคา {{item.price}} บาท</p>
+      </div>
     </ion-row>
   </ion-card>
 </ion-content>
