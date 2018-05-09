@@ -21,12 +21,7 @@ import { DetailPromotionPage } from '../pages/detail-promotion/detail-promotion'
     TypeoffoodPage,
     PromotionPage,
     FavoritesPage,
-<<<<<<< HEAD
-    FoodListPage,
-    LoginPage
-=======
     DetailPromotionPage
->>>>>>> 75926e8f37dedbbb55edb71c3119d2370e76189f
   ],
   imports: [
     BrowserModule,
@@ -39,14 +34,8 @@ import { DetailPromotionPage } from '../pages/detail-promotion/detail-promotion'
     HomePage,
     TypeoffoodPage,
     PromotionPage,
-<<<<<<< HEAD
-    FoodListPage,
-    FavoritesPage,
-    LoginPage
-=======
     FavoritesPage,
     DetailPromotionPage
->>>>>>> 75926e8f37dedbbb55edb71c3119d2370e76189f
   ],
   providers: [
     StatusBar,
