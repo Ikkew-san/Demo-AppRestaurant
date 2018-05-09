@@ -11,7 +11,10 @@ import { HomePage } from '../pages/home/home';
 import { TypeoffoodPage } from '../pages/typeoffood/typeoffood';
 import { PromotionPage } from '../pages/promotion/promotion';
 import { FavoritesPage } from '../pages/favorites/favorites';
-import { DetailPromotionPage } from '../pages/detail-promotion/detail-promotion';
+import { FoodListPage } from '../pages/food-list/food-list';
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { DetailPromotionPage } from '../pages/detail-promotion/detail-promotion'
     TypeoffoodPage,
     PromotionPage,
     FavoritesPage,
-    DetailPromotionPage
+    FoodListPage,
+    RegisterPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -34,8 +39,10 @@ import { DetailPromotionPage } from '../pages/detail-promotion/detail-promotion'
     HomePage,
     TypeoffoodPage,
     PromotionPage,
+    FoodListPage,
     FavoritesPage,
-    DetailPromotionPage
+    RegisterPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

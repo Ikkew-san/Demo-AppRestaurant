@@ -1,3 +1,29 @@
 page-register {
-
+  
+        .login{
+            position: fixed;
+            display: flex;
+            min-height: 95vh;
+            width: 100%;
+            justify-content: center;
+            flex-direction: column;
+            background-image: url("../assets/imgs/bg1.jpg");
+            
+            
+            .login-box {
+                padding: 0 25px;
+                margin-top: 30px;
+                
+                ion-item {
+                    font-size: 1em;
+                    margin-bottom: 10px;
+                    box-shadow: none !important;
+                }
+                
+            }
+            
+        }
+    
 }
+
+

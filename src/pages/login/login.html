@@ -1,25 +1,31 @@
+
+
 <ion-content>
     <div class="login">
       <ion-row>
             <ion-col></ion-col>
             <ion-col width-67>
-              <img src="http://placehold.it/300x200"/>
-            </ion-col>
+                <img src="../assets/imgs/bg1.png" style="width:200px;height:200px;margin-right:15px;">
+              </ion-col>
             <ion-col></ion-col>
           </ion-row>
-          <ion-item>
-            <ion-label>Username</ion-label>
-            <ion-input type="text"></ion-input>
-          </ion-item>
-        
-          <ion-item>
-            <ion-label>Password</ion-label>
-            <ion-input type="password"></ion-input>
-          </ion-item>
+      <div class="login-box">
+        <ion-item>
+            <ion-label fixed>Username</ion-label>
+            <ion-input type="text" value=""></ion-input>
+        </ion-item>
+    
+        <ion-item>    
+            <ion-label fixed>Password</ion-label>
+            <ion-input type="password"></ion-input></ion-item>
         <ion-row>
-          <button col ion-button color="secondary">เข้าสู่ระบบ</button>
-          <button col ion-button color="secondary">ลงทะเบียน</button>
+            <button  class = "button" ion-button block color="secondary" >LOGIN</button>
+             
+
+    <button   class = "button" ion-button block color="secondary" (click)="gotoregister()">REGISTER</button>
         </ion-row>
       </div>
-  
+    </div>  
+
+    
   </ion-content>
