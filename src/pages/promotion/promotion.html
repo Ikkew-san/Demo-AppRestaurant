@@ -9,7 +9,7 @@
 
 
 <ion-content>
-  <div class="box" *ngFor="let data of fulldata">
+  <div class="box" *ngFor="let data of fulldata" (click)="gotoDetail(data)">
     <img src="../assets/imgs/{{data.img}}">
     <div class="text-block">
       <p>{{data.title}}</p>
