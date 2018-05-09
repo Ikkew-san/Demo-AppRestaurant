@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { BasketPage } from '../basket/basket';
 
 /**
  * Generated class for the FavoritesPage page.
@@ -22,4 +23,7 @@ export class FavoritesPage {
     console.log('ionViewDidLoad FavoritesPage');
   }
 
+  gotobasket() {
+    this.navCtrl.setRoot(BasketPage);
+  }
 }

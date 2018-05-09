@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { BasketPage } from '../basket/basket';
 
 /**
  * Generated class for the TypeoffoodPage page.
@@ -33,5 +34,8 @@ export class TypeoffoodPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TypeoffoodPage');
   }
-
+  
+  gotobasket() {
+    this.navCtrl.setRoot(BasketPage);
+  }
 }
