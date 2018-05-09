@@ -1,18 +1,21 @@
-<!--
-  Generated template for the DetailPromotionPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>detailPromotion</ion-title>
-  </ion-navbar>
-
+    <ion-title>รายละเอียด</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only>
+          <ion-icon name="basket"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <div class="content">
+    <img src="../assets/imgs/{{data.img}}">
+    <div padding>
+      <h4>{{data.title}}</h4>
+      <p>{{data.detail}}</p>
+    </div>
+  </div>
 </ion-content>

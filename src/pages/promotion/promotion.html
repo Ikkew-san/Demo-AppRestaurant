@@ -1,18 +1,23 @@
 <ion-header>
-    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>โปรโมชั่น</ion-title>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>โปรโมชั่น</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only>
+          <ion-icon name="basket"></ion-icon>
+        </button>
+      </ion-buttons>
     </ion-navbar>
-  </ion-header>
+</ion-header>
 
 
 <ion-content>
-  <div class="box" *ngFor="let data of fulldata">
-    <img src="../assets/imgs/{{data.img}}">
-    <div class="text-block">
-      <p>{{data.title}}</p>
-    </div>
+<div class="box" *ngFor="let data of fulldata" (click)="gotoDetail(data)">
+  <img src="../assets/imgs/{{data.img}}">
+  <div class="text-block">
+    <p>{{data.title}}</p>
   </div>
+</div>
 </ion-content>
