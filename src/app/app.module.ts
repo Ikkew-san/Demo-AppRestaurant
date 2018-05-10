@@ -15,6 +15,7 @@ import { FoodListPage } from '../pages/food-list/food-list';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { BasketPage } from '../pages/basket/basket';
+import { PaymentPage } from '../pages/payment/payment';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { BasketPage } from '../pages/basket/basket';
     FoodListPage,
     RegisterPage,
     LoginPage,
-    BasketPage
+    BasketPage,
+    PaymentPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { BasketPage } from '../pages/basket/basket';
     FavoritesPage,
     RegisterPage,
     LoginPage,
-    BasketPage
+    BasketPage,
+    PaymentPage
   ],
   providers: [
     StatusBar,
