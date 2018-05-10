@@ -21,12 +21,23 @@
 
 <ion-content>
   <ion-card *ngFor="let item of t">
-    <ion-row style="height: 15vh;">
+    <ion-row>
       <img col-5 src="../assets/imgs/{{item.img}}">
       <div col-7>
-        <strong>{{item.listfood}}</strong>
-        <p>ราคา {{item.price}} บาท</p>
+        <ion-row>
+          <div col-10>
+            <strong>{{item.listfood}}</strong>
+            <p>ราคา {{item.price}} บาท</p>
+          </div>
+          <ion-checkbox col-2 [hidden]="btnHide"></ion-checkbox>
+        </ion-row>
       </div>
     </ion-row>
+        <div class="container">
+        <div class="btn" [hidden]="btnEdit">
+            <button ion-button small><ion-icon name="remove"></ion-icon></button>
+            <button ion-button small><ion-icon name="add"></ion-icon></button>
+        </div>
+        </div>
   </ion-card>
 </ion-content>

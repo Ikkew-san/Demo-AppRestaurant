@@ -14,6 +14,7 @@ import { FavoritesPage } from '../pages/favorites/favorites';
 import { FoodListPage } from '../pages/food-list/food-list';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { BasketPage } from '../pages/basket/basket';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { RegisterPage } from '../pages/register/register';
     FavoritesPage,
     FoodListPage,
     RegisterPage,
-    LoginPage
+    LoginPage,
+    BasketPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { RegisterPage } from '../pages/register/register';
     FoodListPage,
     FavoritesPage,
     RegisterPage,
-    LoginPage
+    LoginPage,
+    BasketPage
   ],
   providers: [
     StatusBar,

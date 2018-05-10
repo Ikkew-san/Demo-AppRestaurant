@@ -5,53 +5,38 @@
     </button>
     <ion-title>รายการโปรด</ion-title>
     <ion-buttons end>
-        <button ion-button icon-only>
-          <ion-icon name="basket"></ion-icon>
+        <button ion-button icon-only (click)="btnActivate()" [hidden]="btnEdit">
+          แก้ไข
+        </button>
+        <button ion-button icon-only (click)="btnActivate()" [hidden]="btnHide">
+          ยกเลิก
+        </button>
+        <button ion-button icon-only (click)="btnActivate()" [hidden]="btnHide">
+          ลบ
         </button>
       </ion-buttons>
     </ion-navbar>
-</ion-header>
+  </ion-header>
 
 
 <ion-content>
-    <ion-card>
-        <ion-row style="height: 15vh;">
-          <ion-img col-5 width="100%"></ion-img>
+    <ion-card *ngFor="let item of t">
+        <ion-row>
+          <img col-5 src="../assets/imgs/{{item.img}}">
+          <div col-7>
+            <ion-row>
+              <div col-10>
+                <strong>{{item.listfood}}</strong>
+                <p>ราคา {{item.price}} บาท</p>
+              </div>
+              <ion-checkbox col-2 [hidden]="btnHide"></ion-checkbox>
+            </ion-row>
+          </div>
         </ion-row>
+            <div class="container">
+            <div class="btn" [hidden]="btnEdit">
+                <button ion-button small><ion-icon name="basket"></ion-icon></button>
+            </div>
+            </div>
       </ion-card>
-      <ion-card>
-        <ion-row style="height: 15vh;">
-          <ion-img col-5 width="100%"></ion-img>
-        </ion-row>
-      </ion-card>
-      <ion-card>
-        <ion-row style="height: 15vh;">
-          <ion-img col-5 width="100%"></ion-img>
-        </ion-row>
-      </ion-card>
-      <ion-card>
-        <ion-row style="height: 15vh;">
-          <ion-img col-5 width="100%"></ion-img>
-        </ion-row>
-      </ion-card>    <ion-card>
-          <ion-row style="height: 15vh;">
-            <ion-img col-5 width="100%"></ion-img>
-          </ion-row>
-        </ion-card>
-        <ion-card>
-          <ion-row style="height: 15vh;">
-            <ion-img col-5 width="100%"></ion-img>
-          </ion-row>
-        </ion-card>
-        <ion-card>
-          <ion-row style="height: 15vh;">
-            <ion-img col-5 width="100%"></ion-img>
-          </ion-row>
-        </ion-card>
-        <ion-card>
-          <ion-row style="height: 15vh;">
-            <ion-img col-5 width="100%"></ion-img>
-          </ion-row>
-        </ion-card>
-    
   </ion-content>
