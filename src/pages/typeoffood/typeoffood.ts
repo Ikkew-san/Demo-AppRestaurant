@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FoodListPage } from '../../pages/food-list/food-list';
 
 /**
  * Generated class for the TypeoffoodPage page.
@@ -33,5 +34,7 @@ export class TypeoffoodPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TypeoffoodPage');
   }
-
+  gotofoodlist(){
+    this.navCtrl.push(FoodListPage);
+}
 }
