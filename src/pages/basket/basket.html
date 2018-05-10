@@ -19,7 +19,8 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content (ionScroll)="onScroll($event)" [class.transition]="transition">
+<!-- <ion-content> -->
   <ion-card *ngFor="let item of t">
     <ion-row>
       <img col-5 src="../assets/imgs/{{item.img}}">
@@ -41,3 +42,12 @@
         </div>
   </ion-card>
 </ion-content>
+
+<ion-footer transparent [class.show-background]="showToolbar">
+    <ion-toolbar>
+      <ion-row padding-horizontal>
+        <div col text-left><strong>ราคาสุทธิ</strong> </div>
+        <div col text-right><strong>xxx บาท</strong></div>
+      </ion-row>
+  </ion-toolbar>
+</ion-footer>

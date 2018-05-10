@@ -1,7 +1,10 @@
 page-basket {
     
-    ion-row {
-        height: 15vh;
+    ion-card {
+
+        ion-row {
+            height: 15vh;
+        }
     }
     
     img[col-5] {
@@ -39,4 +42,7 @@ page-basket {
         }
     }
 
+    .show-background {
+        display: none;
+   }
 }
