@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Payment</ion-title>
+    <ion-title>ชำระเงิน</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -10,20 +10,58 @@
 <ion-content>
   <ion-card class="box-user">
     <ion-row> 
-      <ion-col col-auto>
-        <img style="background-color: gray; height: 100px; width: 100px; border-radius: 100%;">
+      <ion-col col-auto padding-horizontal>
+        <img src="../assets/imgs/logo.png">
       </ion-col>
-      <ion-col padding>
-        <strong>xxx</strong>
+      <ion-col padding-vertical>
+        <ion-row>
+          <strong style="font-size: 18pt;">xxx</strong>
+        </ion-row>
+        <ion-row>
+          <p style="font-size: 16pt;">xxx</p>
+        </ion-row>
+        <ion-row>
+          <a (click)="boxDetail()">เพิ่มเติม</a>
+        </ion-row>
       </ion-col>
-      <ion-col col-12></ion-col>
+      <ion-col col-12 style="padding-top: 0px;" [hidden]="detail">
+        <p style="text-align: center"><strong>รายการ</strong></p>
+        <ion-row>
+            <ion-col col-6>
+              addfhgfjdggh
+            </ion-col>
+            <ion-col style="text-align: center">
+              x 300
+            </ion-col>
+            <ion-col col-4 style="text-align: right">
+              100.00 บาท
+            </ion-col>
+          </ion-row>
+      </ion-col>
     </ion-row>
   </ion-card>
+  
+  <div class="box-payment">
+      <ion-row>
+          <ion-col col-auto>
+              <button ion-button icon-only clear>
+                <ion-icon name="add-circle"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col padding-vertical>
+              เพิ่มบัญชีธนาคาร
+            </ion-col>
+        </ion-row>
+      </div>
 
 </ion-content>
-
+ 
 <ion-footer>
-    <ion-toolbar padding-horizontal>
-        <button ion-button full>ชำระเงิน</button>
+    <ion-toolbar  style="padding: 10px">
+        <ion-row padding-horizontal>
+            <div col text-left><strong>ยอดรวม</strong> </div>
+            <div col text-right><strong>xxx บาท</strong></div>
+            <button col-12 ion-button full>ชำระเงิน</button>
+          </ion-row>
     </ion-toolbar>
 </ion-footer>

@@ -1,12 +1,24 @@
 page-payment {
+    
+    .box-user {
+        border-radius: 10px;
+    }
 
-    // .box-user {
-    //     border-radius: 5px;
-    //     // padding: 5px 0px;
-    //     transition: height 4s;
-    // }
+    img {
+        background-color: gray;
+        height: 100px; 
+        width: 100px; 
+        border-radius: 100%;
+    }
+    
+    .box-payment {
+        background-color: white;
+        font-size: 14pt;
 
-    // .box-user:hover {
-    //     height: 300px;
-    // }
+
+        ion-icon {
+            font-size: 22pt;
+            color: green;
+        }
+    }   
 }
