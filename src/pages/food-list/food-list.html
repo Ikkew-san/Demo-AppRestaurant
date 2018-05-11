@@ -13,18 +13,19 @@
 
 
 <ion-content padding >
-  
-  <ion-card  *ngFor="let item of t">
+    
+  <ion-card  *ngFor="let data of t"(click)="gotodetailfood(data)">
    
-   <img src="../assets/imgs/{{item.img}}"  style="width:140px;height:100px;margin-right:15px;">
-     <br> <h2>{{item.listfood}}</h2>      
-     ราคา {{item.price}} บาท
+   <img src="../assets/imgs/{{data.img}}"  style="width:140px;height:100px;margin-right:15px;">
+     <br> <h2>{{data.listfood}}</h2>      
+     ราคา {{data.price}} บาท
    
         <h1><ion-icon ios="ios-basket" md="ios-basket-outline"></ion-icon></h1>
-      
+  
         
            
         
      
  </ion-card>
+ 
 </ion-content>
