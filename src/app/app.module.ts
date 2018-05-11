@@ -18,6 +18,7 @@ import { BasketPage } from '../pages/basket/basket';
 import{DetailFoodPage}from '../pages/detail-food/detail-food';
 import { DetailPromotionPage } from '../pages/detail-promotion/detail-promotion';
 import { DetailHomePage } from '../pages/detail-home/detail-home';
+import { PaymentPage } from '../pages/payment/payment';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { DetailHomePage } from '../pages/detail-home/detail-home';
     BasketPage,
     DetailFoodPage,
     DetailPromotionPage,
-    DetailHomePage
+    DetailHomePage,
+    PaymentPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { DetailHomePage } from '../pages/detail-home/detail-home';
     BasketPage,
     DetailFoodPage,
     DetailPromotionPage,
-    DetailHomePage
+    DetailHomePage,
+    PaymentPage
   ],
   providers: [
     StatusBar,
