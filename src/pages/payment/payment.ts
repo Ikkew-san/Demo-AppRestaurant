@@ -14,6 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'payment.html',
 })
 export class PaymentPage {
+  detail:boolean = true;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -22,4 +23,7 @@ export class PaymentPage {
     console.log('ionViewDidLoad PaymentPage');
   }
 
+  boxDetail() {
+    this.detail = (this.detail === true)? false : true;
+  }
 }

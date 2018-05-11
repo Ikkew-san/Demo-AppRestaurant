@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -19,7 +19,12 @@ export class BasketPage {
 
   t: Array<{img: string, listfood: string,price: any}>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  showToolbar: boolean = true;
+  transition: boolean;
+
+  stackScroll:number = 0;
+
+  constructor(public ref: ChangeDetectorRef, public navCtrl: NavController, public navParams: NavParams) {
     this.btnHide = true;
     this.btnEdit = false;
 
@@ -82,12 +87,27 @@ export class BasketPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BasketPage');
+    // console.log('ionViewDidLoad BasketPage');
   }
 
   btnActivate() {
     this.btnHide = (this.btnHide === true)? false : true;
     this.btnEdit = (this.btnEdit === false)? true : false;
+  }
+
+  onScroll($event: any) {
+    let scrollTop = $event.scrollTop;
+    this.showToolbar = scrollTop >= this.stackScroll;
+    if (scrollTop < this.stackScroll) {
+      this.stackScroll = $event.scrollTop;
+      this.transition = false;
+    } else {
+      this.stackScroll = $event.scrollTop;
+      this.transition = true;
+    }
+    this.ref.detectChanges();
+    console.log(this.stackScroll);
+    console.log(this.transition);
   }
 
 }
