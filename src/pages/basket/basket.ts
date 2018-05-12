@@ -106,8 +106,6 @@ export class BasketPage {
       this.transition = true;
     }
     this.ref.detectChanges();
-    console.log(this.stackScroll);
-    console.log(this.transition);
   }
 
 }

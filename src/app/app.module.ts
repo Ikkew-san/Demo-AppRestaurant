@@ -15,7 +15,7 @@ import { FoodListPage } from '../pages/food-list/food-list';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { BasketPage } from '../pages/basket/basket';
-import{DetailFoodPage}from '../pages/detail-food/detail-food';
+import { DetailFoodPage } from '../pages/detail-food/detail-food';
 import { DetailPromotionPage } from '../pages/detail-promotion/detail-promotion';
 import { DetailHomePage } from '../pages/detail-home/detail-home';
 import { PaymentPage } from '../pages/payment/payment';
