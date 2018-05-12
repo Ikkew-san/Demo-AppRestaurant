@@ -1,5 +1,6 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component/*, ChangeDetectorRef */} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PaymentPage } from '../payment/payment';
 
 /**
  * Generated class for the BasketPage page.
@@ -19,12 +20,12 @@ export class BasketPage {
 
   t: Array<{img: string, listfood: string,price: any}>;
 
-  showToolbar: boolean = true;
-  transition: boolean;
+  // showToolbar: boolean = true;
+  // transition: boolean;
 
-  stackScroll:number = 0;
+  // stackScroll:number = 0;
 
-  constructor(public ref: ChangeDetectorRef, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(/*public ref: ChangeDetectorRef,*/ public navCtrl: NavController, public navParams: NavParams) {
     this.btnHide = true;
     this.btnEdit = false;
 
@@ -95,17 +96,20 @@ export class BasketPage {
     this.btnEdit = (this.btnEdit === false)? true : false;
   }
 
-  onScroll($event: any) {
-    let scrollTop = $event.scrollTop;
-    this.showToolbar = scrollTop >= this.stackScroll;
-    if (scrollTop < this.stackScroll) {
-      this.stackScroll = $event.scrollTop;
-      this.transition = false;
-    } else {
-      this.stackScroll = $event.scrollTop;
-      this.transition = true;
-    }
-    this.ref.detectChanges();
+  gotoPayment() {
+    this.navCtrl.push(PaymentPage);
   }
+  // onScroll($event: any) {
+  //   let scrollTop = $event.scrollTop;
+  //   this.showToolbar = scrollTop >= this.stackScroll;
+  //   if (scrollTop < this.stackScroll) {
+  //     this.stackScroll = $event.scrollTop;
+  //     this.transition = false;
+  //   } else {
+  //     this.stackScroll = $event.scrollTop;
+  //     this.transition = true;
+  //   }
+  //   this.ref.detectChanges();
+  // }
 
 }

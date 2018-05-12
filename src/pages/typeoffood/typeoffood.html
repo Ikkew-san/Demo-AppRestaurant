@@ -4,11 +4,6 @@
         <ion-icon name="menu"></ion-icon>
       </button>
       <ion-title>ประเภทอาหาร</ion-title>
-       <ion-buttons end>
-        <button ion-button icon-only (click)="gotobasket()">
-          <ion-icon name="basket"></ion-icon>
-        </button>
-      </ion-buttons>
     </ion-navbar>
   </ion-header>
 
@@ -16,7 +11,7 @@
       <div (click)="gotofoodlist()">
     <ion-card  *ngFor="let item of fullitem">
        <img src="../assets/imgs/{{item.img}}" width="100%" height="250">     
-    
+         
         <div class="card-title"> {{item.namefood}}</div>
     </ion-card>
   
