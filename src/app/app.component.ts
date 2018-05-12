@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { BasketPage } from '../pages/basket/basket';
-import { PaymentPage } from '../pages/payment/payment';
+
 
 export interface PageInterface {
   title: string;
