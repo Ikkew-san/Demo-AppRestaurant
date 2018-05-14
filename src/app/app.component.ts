@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TabsPage } from '../pages/tabs/tabs';
 import { BasketPage } from '../pages/basket/basket';
 import { ProfilePage } from '../pages/profile/profile';
+import { LoginPage } from '../pages/login/login';
 
 
 export interface PageInterface {
@@ -32,8 +33,18 @@ export class MyApp {
     { title: 'บัญชี', component: ProfilePage, icon: 'ios-contact' },
   ];
 
+  isLoggedin:boolean;
+  login:boolean;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+    if(localStorage.getItem("isLoggedin"))
+    {
+      this.isLoggedin = false;
+      this.login = true;
+    } else {
+      this.isLoggedin = true;
+      this.login = false;
+    }
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -55,4 +66,13 @@ export class MyApp {
 
   }
 
+  gotoLogin() {
+    this.nav.push(LoginPage);
+  }
+
+  doLogout(){
+    localStorage.removeItem("isLoggedin");
+    this.isLoggedin = true;
+    this.login = false;
+  }
 }

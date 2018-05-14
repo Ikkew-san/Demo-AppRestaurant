@@ -1,20 +1,20 @@
 <ion-menu [content]="content">
   
     <ion-content >
-      <ion-list>
-        <div class="c1">
+      <ion-list [hidden]="isLoggedin">
+        <div class="c1" >
               <br><img src="http://petmaya.com/wp-content/uploads/2014/11/funny-animal-01.jpg" alt="Avatar" class="avatar">
               <p>Tanabut</p> 
               <p>ngerntanabut@gmail.com</p> 
-              <button ion-button color="danger">ออกจากระบบ</button>
+              <button ion-button menuClose color="danger" (click)="doLogout()">ออกจากระบบ</button>
             </div> 
       </ion-list>
-      <!-- <ion-list padding="10">
+      <ion-list padding-top="10" [hidden]="login">
         <div class="c1">
             <img src="http://www.clker.com/cliparts/5/7/4/8/13099629981030824019profile.svg.hi.png" alt="Avatar" class="avatar">
-            <br><br><button ion-button color="secondary">เข้าสู่ระบบ</button>
+            <br><br><button menuClose ion-button color="secondary" (click)="gotoLogin()">เข้าสู่ระบบ</button>
         </div> 
-      </ion-list> -->
+      </ion-list>
 
 
       <ion-list>
