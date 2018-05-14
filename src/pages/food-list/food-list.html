@@ -1,27 +1,36 @@
-
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu">foodList</ion-icon>
-    </button>
-    
-   
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      
      
-    </ion-navbar>
-  </ion-header>
-<ion-content>
-    <ion-card *ngFor="let item of t">
-        <ion-row>
-          <img col-5 src="../assets/imgs/{{item.img}}">
-          <div col-7>
-            <ion-row>
-              <div col-10>
-                <strong>{{item.listfood}}</strong>
-                <p>ราคา {{item.price}} บาท</p>
+       
+      </ion-navbar>
+    </ion-header>
+  
+  
+  <ion-content>
+      <ion-card *ngFor="let item of t" >
+          <ion-row>
+            <img col-5 src="../assets/imgs/{{item.img}}">
+            <div col-7>
+              <ion-row>
+                <div col-10>
+                  <strong>{{item.listfood}}</strong>
+                  <p>ราคา {{item.price}} บาท</p>
+                </div>
+              </ion-row>
+            </div>
+          </ion-row>
+              <div class="container">
+              <div class="btn" [hidden]="btnEdit">
+                  <button ion-button small><ion-icon name="basket"></ion-icon></button>
               </div>
-            </ion-row>
-          </div>
-        </ion-row>
-           
-      </ion-card>
-  </ion-content>
+              </div>
+        </ion-card>
+    </ion-content>
+  
+
+  
+  

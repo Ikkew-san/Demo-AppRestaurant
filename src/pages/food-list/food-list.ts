@@ -79,8 +79,8 @@ export class FoodListPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad FoodListPage');
   }
-  gotodetailfood(data){
-    this.navCtrl.push(DetailFoodPage,{data});
+  gotodetailfood(item){
+    this.navCtrl.push(DetailFoodPage,{item});
   }
 
 }
