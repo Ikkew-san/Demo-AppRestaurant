@@ -1,5 +1,4 @@
 <ion-header>
-    
     <ion-navbar>
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -12,9 +11,14 @@
       <div (click)="gotofoodlist()">
     <ion-card  *ngFor="let item of fullitem">
        <img src="../assets/imgs/{{item.img}}" width="100%" height="250">     
-         
-        <div class="card-title">{{item.namefood}}</div>
+
+        
+       <div class="text-block">
+          <div class="text">
+      {{item.namefood}}
+      </div>
+        </div>
     </ion-card>
   
-    </div>
+   </div>
 </ion-content>

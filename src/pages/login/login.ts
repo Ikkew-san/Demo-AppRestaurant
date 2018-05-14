@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Refresher } from 'ionic-angular';
 import { RegisterPage } from '../../pages/register/register';
+import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the LoginPage page.
@@ -23,9 +24,13 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
   gotoregister(){
-this.navCtrl.push(RegisterPage);
-
-
+    this.navCtrl.push(RegisterPage);
   }
 
+  doLogin() {
+    localStorage.setItem('isLoggedin', 'true');
+    this.navCtrl.setRoot(TabsPage).then(() => {
+      window.location.reload();
+    });
+  }
 }
