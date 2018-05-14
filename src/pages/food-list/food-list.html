@@ -5,31 +5,26 @@
       </button>
       
      
-       
-      </ion-navbar>
-    </ion-header>
-  
-  
-  <ion-content>
-      <ion-card *ngFor="let item of t" >
-          <ion-row>
-            <img col-5 src="../assets/imgs/{{item.img}}">
-            <div col-7>
-              <ion-row>
-                <div col-10>
-                  <strong>{{item.listfood}}</strong>
-                  <p>ราคา {{item.price}} บาท</p>
-                </div>
+    </ion-navbar>
+  </ion-header>
+<ion-content>
+    <ion-card *ngFor="let data of t" (click)="gotodetailfood(data)">
+        <ion-row>
+          <img col-5 src="../assets/imgs/{{data.img}}">
+          <div col-7>
+            <ion-row>
+              <div col-10>
+                <strong>{{data.listfood}}</strong>
+                <p>ราคา {{data.price}} บาท</p>
+              </div>
               </ion-row>
-            </div>
-          </ion-row>
-              <div class="container">
-              <div class="btn" [hidden]="btnEdit">
-                  <button ion-button small><ion-icon name="basket"></ion-icon></button>
               </div>
-              </div>
-        </ion-card>
-    </ion-content>
+              </ion-row>
+              
+            </ion-card>
+            </ion-content>
+
+     
   
 
   
