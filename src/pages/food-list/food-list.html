@@ -10,7 +10,7 @@
     </ion-navbar>
   </ion-header>
 <ion-content>
-    <ion-card *ngFor="let item of t">
+    <ion-card *ngFor="let item of t" (click)="gotodetailfood(item)">
         <ion-row>
           <img col-5 src="../assets/imgs/{{item.img}}">
           <div col-7>
