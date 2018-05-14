@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { BasketPage } from '../pages/basket/basket';
+import { ProfilePage } from '../pages/profile/profile';
 
 
 export interface PageInterface {
@@ -28,6 +29,7 @@ export class MyApp {
     { title: 'รายการโปรด', component: TabsPage, index: 3, icon: 'star' },
     { title: 'ตะกร้า', component: BasketPage, icon: 'basket' },
     { title: 'ตั้งค่า', component: '', icon: 'settings' },
+    { title: 'บัญชี', component: ProfilePage, icon: 'ios-contact' },
   ];
 
 

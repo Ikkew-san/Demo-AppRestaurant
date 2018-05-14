@@ -19,6 +19,7 @@ import { DetailFoodPage } from '../pages/detail-food/detail-food';
 import { DetailPromotionPage } from '../pages/detail-promotion/detail-promotion';
 import { DetailHomePage } from '../pages/detail-home/detail-home';
 import { PaymentPage } from '../pages/payment/payment';
+import { ProfilePage } from '../pages/profile/profile';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { PaymentPage } from '../pages/payment/payment';
     DetailFoodPage,
     DetailPromotionPage,
     DetailHomePage,
-    PaymentPage
+    PaymentPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import { PaymentPage } from '../pages/payment/payment';
     DetailFoodPage,
     DetailPromotionPage,
     DetailHomePage,
-    PaymentPage
+    PaymentPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,
