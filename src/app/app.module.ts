@@ -21,6 +21,9 @@ import { DetailHomePage } from '../pages/detail-home/detail-home';
 import { PaymentPage } from '../pages/payment/payment';
 import { ProfilePage } from '../pages/profile/profile';
 
+import { HttpClientModule } from '@angular/common/http';
+import { AppProvider } from '../providers/app/app';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +45,8 @@ import { ProfilePage } from '../pages/profile/profile';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -65,7 +69,8 @@ import { ProfilePage } from '../pages/profile/profile';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AppProvider
   ]
 })
 export class AppModule {}
