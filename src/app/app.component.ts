@@ -7,7 +7,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { BasketPage } from '../pages/basket/basket';
 import { ProfilePage } from '../pages/profile/profile';
 import { LoginPage } from '../pages/login/login';
-
+import { RegisterPage } from '../pages/register/register';
 
 export interface PageInterface {
   title: string;
