@@ -8,17 +8,17 @@
   </ion-header>
 
 <ion-content class="card-background-page">
-      <div (click)="gotofoodlist()">
-    <ion-card  *ngFor="let item of fullitem">
-       <img src="../assets/imgs/{{item.img}}" width="100%" height="250">     
-
-        
-       <div class="text-block">
-          <div class="text">
-      {{item.namefood}}
-      </div>
+  <div *ngFor="let item of fullitem">
+    <ion-card (click)="gotofoodlist(item.prot_id,item.prot_name)">
+      <img src="../assets/imgs/{{item.prot_img}}" width="100%" height="250">     
+      
+      
+      <div class="text-block">
+        <div class="text">
+          {{item.prot_name}}
         </div>
+      </div>
     </ion-card>
-  
-   </div>
+    
+  </div>
 </ion-content>

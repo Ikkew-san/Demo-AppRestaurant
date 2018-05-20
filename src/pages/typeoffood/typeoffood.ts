@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AppProvider } from '../../providers/app/app';
+
 import { FoodListPage } from '../../pages/food-list/food-list';
 
 /**
@@ -15,26 +17,24 @@ import { FoodListPage } from '../../pages/food-list/food-list';
   templateUrl: 'typeoffood.html',
 })
 export class TypeoffoodPage {
-  fullitem: Array<{img: string, namefood: string}>;
+  fullitem: any
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.fullitem=[
-      {img:'fried4.jpg',namefood:'อาหารยอดฮิต'},
-      {img:'toboilc5.jpg',namefood:'ต้ม-แกง'},
-      {img:'fried2.jpg',namefood:'ทอด'},
-      {img:'seafood1.jpg',namefood:'ซีฟู้ด'},
-      {img:'yam1.jpg',namefood:'ยำ'},
-      {img:'onedish4.jpg',namefood:'อาหารจานเดียว'},
-      {img:'grill1.jpg',namefood:'ปิ้ง-ย่าง'},
-      {img:'steam1.jpg',namefood:'นึ่ง'},
-      {img:'waterchilli2.jpg',namefood:'น้ำพริก'}
-    ]
+  constructor(public navCtrl: NavController, public navParams: NavParams, public AppProvider: AppProvider) {
+    this.getTypefood();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TypeoffoodPage');
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad TypeoffoodPage');
+  // }
+
+  getTypefood(){
+    this.AppProvider.getTypefood().subscribe(res => {
+      console.log(res)
+      this.fullitem = res
+    }, err => console.log(err))
   }
-  gotofoodlist(){
-    this.navCtrl.push(FoodListPage);
-}
+
+  gotofoodlist(id: number,name: string){
+    this.navCtrl.push(FoodListPage, {id, name});
+  }
 }

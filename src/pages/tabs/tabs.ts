@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { NavParams } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
 import { PromotionPage } from '../promotion/promotion';
 import { FavoritesPage } from '../favorites/favorites';
 import { TypeoffoodPage } from '../typeoffood/typeoffood';
-import { BasketPage } from '../basket/basket';
-import { NavParams } from 'ionic-angular';
 
 
 
