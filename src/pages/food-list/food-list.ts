@@ -25,8 +25,8 @@ export class FoodListPage {
     this.getFoodList();
   }
 
-  ionViewDidLoad() {
-  }
+  // ionViewDidLoad() {
+  // }
 
   getFoodList() {   
      let id = this.navParams.get("id");

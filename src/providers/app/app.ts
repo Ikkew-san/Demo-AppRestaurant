@@ -19,4 +19,12 @@ export class AppProvider {
   getPromotion() {
     return this.http.get(`${API_URL}/promotion`); 
   }
+
+  getFavorite() {
+    return this.http.get(`${API_URL}/favorite`); 
+  }
+
+  getBasket() {
+    return this.http.get(`${API_URL}/basket`); 
+  }
 }

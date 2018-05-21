@@ -8,14 +8,14 @@
 </ion-header>
 
 <ion-content>
-    <ion-card *ngFor="let data of t" (click)="gotodetailfood(data)">
+    <ion-card *ngFor="let item of fullitem" (click)="gotodetailfood(item)">
         <ion-row>
-          <img col-5 src="../assets/imgs/{{data.img}}">
+          <img col-5 src="../assets/imgs/{{item.pro_img}}">
           <div col-7>
             <ion-row>
               <div col-10>
-                <strong>{{data.listfood}}</strong>
-                <p>ราคา {{data.price}} บาท</p>
+                <strong>{{item.pro_name}}</strong>
+                <p>ราคา {{item.pro_price}} บาท</p>
               </div>
               </ion-row>
               </div>
