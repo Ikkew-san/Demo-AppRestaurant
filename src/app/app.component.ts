@@ -35,9 +35,17 @@ export class MyApp {
   isLoggedin:boolean;
   login:boolean;
 
+  value: Array <{username: any, email: any, img: any}>
+
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-    if(localStorage.getItem("isLoggedin"))
+    if(localStorage.getItem("user"))
     {
+      let data1 = JSON.parse(localStorage.getItem('user'));
+      let data2 = JSON.parse(localStorage.getItem('profile'));
+      this.value = [{
+        username: data1['user_username'], email: data1['user_email'], img: data2['prof_img']
+      }]
+
       this.isLoggedin = false;
       this.login = true;
     } else {

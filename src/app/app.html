@@ -2,10 +2,10 @@
   
     <ion-content >
       <ion-list [hidden]="isLoggedin">
-        <div class="c1" >
-              <br><img src="http://petmaya.com/wp-content/uploads/2014/11/funny-animal-01.jpg" alt="Avatar" class="avatar">
-              <p>Tanabut</p> 
-              <p>ngerntanabut@gmail.com</p> 
+        <div class="c1" *ngFor="let p of value">
+              <br><img src="../assets/imgs/{{p.img}}" alt="Avatar" class="avatar">
+              <p>{{p.username}}</p> 
+              <p>{{p.email}}</p> 
               <button ion-button menuClose color="danger" (click)="doLogout()">ออกจากระบบ</button>
             </div> 
       </ion-list>

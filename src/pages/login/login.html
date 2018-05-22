@@ -1,26 +1,28 @@
 <ion-content>
-  <div class="login">
-    <ion-row>
-      <ion-col></ion-col>
-      <ion-col width-67>
-        <img src="../assets/imgs/bg1.png" style="width:200px;height:200px;margin-right:15px;">
-      </ion-col>
-      <ion-col></ion-col>
-    </ion-row>
-    <div class="login-box">
-      <ion-item>
-        <ion-label fixed>Username</ion-label>
-        <ion-input type="text" value=""></ion-input>
-      </ion-item>
-      
-      <ion-item>    
-        <ion-label fixed>Password</ion-label>
-        <ion-input type="password"></ion-input></ion-item>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="login">
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col width-67>
+          <img src="../assets/imgs/bg1.png" style="width:200px;height:200px;margin-right:15px;">
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <div class="login-box">
+        <ion-item>
+          <ion-label fixed>Username</ion-label>
+          <ion-input type="text" name="username" ngModel></ion-input>
+        </ion-item>
+        
+        <ion-item>    
+          <ion-label fixed>Password</ion-label>
+          <ion-input type="password" name="password" ngModel></ion-input>
+        </ion-item>
         <ion-row>
-          <button  class = "button" ion-button block color="secondary" (click)="doLogin()">LOGIN</button>
-          <button class = "button" ion-button block color="secondary" (click)="gotoregister()">REGISTER</button>
+            <button class="button" ion-button block color="secondary" type="submit">LOGIN</button>
+            <button class="button" ion-button block color="secondary" (click)="gotoregister()">REGISTER</button>
         </ion-row>
       </div>
     </div>    
-  </ion-content>
-    
+  </form>
+</ion-content>

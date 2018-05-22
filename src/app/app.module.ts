@@ -23,6 +23,7 @@ import { ProfilePage } from '../pages/profile/profile';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppProvider } from '../providers/app/app';
+import { AuthenProvider } from '../providers/authen/authen';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { AppProvider } from '../providers/app/app';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AppProvider
+    AppProvider,
+    AuthenProvider
   ]
 })
 export class AppModule {}
