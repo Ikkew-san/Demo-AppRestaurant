@@ -23,11 +23,11 @@ export class FavoritesPage {
   fulldata: any
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public appProvider: AppProvider) {
-
+    this.getFavorite();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FavoritesPage');
+    // console.log(this.fulldata);
   }
 
   getFavorite() {   
