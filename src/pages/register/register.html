@@ -1,7 +1,8 @@
 
 <ion-content>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+    
 
     <div class="register">
       <ion-row>
@@ -11,23 +12,19 @@
       <div class="login-box">
         <ion-item>
             <ion-label fixed>Username</ion-label>
-            <ion-input type="Username" value=""></ion-input>
+            <ion-input type="Username" value="" name="username" ngModel></ion-input>
         </ion-item>
     
         <ion-item>    
             <ion-label fixed>Password</ion-label>
-            <ion-input type="password"></ion-input></ion-item>
+            <ion-input type="password" name="password" ngModel></ion-input></ion-item>
             <ion-item>
                 <ion-label fixed>Email</ion-label>
-                <ion-input type="email" value=""></ion-input>
+                <ion-input type="email" value="" name="email" ngModel></ion-input>
             </ion-item>
-             <ion-item>
-            <ion-label fixed>Confirm mail</ion-label>
-            <ion-input type="Confirm" value=""></ion-input>
-        </ion-item>
             <ion-item>
                 <ion-label fixed>Phone</ion-label>
-                <ion-input type="phone" value=""></ion-input>
+                <ion-input type="phone" value="" name="phone" ngModel></ion-input>
             </ion-item>
         <ion-row>
             <button type="submit"  class="button" ion-button block color="secondary" >register</button>
@@ -36,6 +33,6 @@
       </ion-row>
       </div>
     </div>  
-
+</form>
     
   </ion-content>

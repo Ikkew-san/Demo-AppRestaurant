@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { API_URL } from '../api_url';
+import { PARAMETERS } from '@angular/core/src/util/decorators';
 
 /*
   Generated class for the AuthenProvider provider.
@@ -25,6 +26,9 @@ export class AuthenProvider {
 
   getProfile(id){
     return this.http.get(`${API_URL}/profile/${id}`);
+  }
+  setRegister(params){
+    return this.http.post(`${API_URL}/register`, params);
   }
   
 }
